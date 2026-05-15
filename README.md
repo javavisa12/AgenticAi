@@ -1,9 +1,6 @@
 # AgenticAi
 
-* Extension * : continue
 * Run * :  python -m llama_cpp.server --model Ai-Agent\models\Qwen3.5-2B-Q8_0.gguf --n_ctx 8192
-
-
 
 
 config.yaml
@@ -23,3 +20,10 @@ models:
       - edit
       - apply
     systemMessage: "You are a helpful coding assistant. Be concise."
+    defaultCompletionOptions:
+      temperature: 0.2
+
+context:
+  - provider: folder
+  - provider: file
+  - provider: codebase
